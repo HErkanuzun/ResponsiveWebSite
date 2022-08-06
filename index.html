@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonLight</title>
+    <a href="#" class="btn"></a>
+    <link rel="stylesheet" type="text/css" href="css/style.css"
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#" class="hover">About</a></li>
+            <li><a href="#" class="hover">Work</a></li>
+            <li><a href="#" class="hover">Contact</a></li>
+            <li><a href="#" class="hover">Galary</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars">
+        <img src="img/moon.png" id="moon"> 
+        <img src="img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/mountains_front.png" id="mountains_front">
+    </section>
+    <content>
+        <div class="sec id="sec">
+            <h2>This Are Scrooling Effects</h2>
+            <p>
+                Moon soil can convert carbon dioxide into oxygen, raising the possibility that it could be used to support human life in space, a study has found.
+    
+    The report published in the scientific journal Joule found that moon soil contains active compounds that could be used, along with sunlight and carbon dioxide, to produce water, oxygen and fuel to support life on a moonbase and enable further exploration of space.
+    
+    “Our strategy provides a scenario for a sustainable and affordable extraterrestrial living environment,” Yingfang Yao, a material scientist from Nanjing University in China and lead author of the report.
+    
+    “If we want to carry out large-scale exploration of the extraterrestrial world, we will need to think of ways to reduce payload, meaning relying on as little supplies from Earth as possible and using extraterrestrial resources instead.”
+            <br><br>
+            Previously, scientists have proposed strategies for extraterrestrial survival but most require energy sources from Earth. For example, though Nasa’s Perseverance Mars rover carried an instrument that can use carbon dioxide in the planet’s atmosphere to make oxygen, the vehicle was powered by a nuclear battery.
+    <br>
+    This time, however, Dr Yao and his colleagues hope to take advantage of the two most abundant resources on the moon: solar radiation and soil, minimising what needs to be transported into space.
+    
+    The team of scientists analysed moon soil brought back by China’s Chang’E-5 spacecraft and found that it contained iron- and titanium-rich substances. Now, they hope to design an “extraterrestrial photosynthesis” system that will use moon soil to electrolyze water.
+    <br>
+    The carbon dioxide exhaled by astronauts will also be collected and combined with hydrogen from the water electrolysis. The process will yield hydrocarbons such as methane, which could be used as fuel, according to the scientists, helping sustain human life on the moon in a cost-efficient way.
+    
+    The team hopes to test the system in space on future lunar missions by China.
+    
+    “In light of significant effort conducted to manned deep space exploration, it is of high technological importance and scientific interest to develop the lunar life support system for long-term exploration,” the authors of the report said in its summary. “Lunar in situsource utilization offers a great opportunity to provide the material basis of life support for lunar habitation and traveling.”
+            </p>
+        </div>
+    
+    </content>
+
+    <footer>
+        <div>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="hover">Home</a></li>
+                <li><a href="#" class="hover">About</a></li>
+                <li><a href="#" class="hover">Work</a></li>
+                <li><a href="#" class="hover">Contact</a></li>
+                <li><a href="#" class="hover">Galary</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1.25 +'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+
+        });
+    </script>
+
+
+</body>
+</html>
